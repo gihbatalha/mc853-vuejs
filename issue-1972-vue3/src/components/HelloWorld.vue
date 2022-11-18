@@ -11,15 +11,29 @@
          :custom-3="true ? '' : null"
       >.
     </p>
+
+    <p>
+      Scenario using custom component with prop="true"
+      <CustomComponent :shouldRender="true"/>
+    </p>
+
+    <p>
+      Scenario using custom component with prop="false"
+      <CustomComponent :shouldRender="false"/>
+    </p>
   </div>
 </template>
 
 <script>
+
+import CustomComponent from "./CustomComponent.vue";
+
 export default {
   name: "HelloWorld",
   props: {
     msg: String,
   },
+  components: { CustomComponent }
 };
 </script>
 
